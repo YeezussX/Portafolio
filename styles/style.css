@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+:root{                                                /*ayuda a establecer estilos glables*/
+    --color-primario: #000000;
+    --color-secundario: #F6F6F6;
+    --color-terciario: #22D4FD;
+    --color-hover: #272727;
+
+    --fuente-monserrat: 'Montserrat', sans serif;
+    --fuente-krona: 'Krona One', sans serif;
+}
+
+* {
+    padding: 0;
+    margin:0;
+}
+
+body{
+    box-sizing: border-box;
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+}
+
+.header{
+    padding: 2% 0% 0% 15%;                 /*crea un espacio fuera de los elementos top-right>--bottom--<left*/
+
+}
+
+.header__menu{
+    display: flex;
+    gap: 80px;
+}
+
+.header__menu__link{
+    font-family: var(--fuente-monserrat);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-terciario);
+    text-decoration: none;
+}
+
+.presentacion {
+    padding: 6% 15%;                        /* agrega un margen para centrar los cuadrados en la pantalla */
+    display: flex;                          /*posiciona los elementos uno al lado del otro*/
+    align-items: center;                    /*alinear elementos*/
+    justify-content: space-between;         /*mover elementos a en diferentes posiciones separadas o juntas*/
+    gap: 82px;
+}
+
+.presentacion__contenido{
+    width: 50%;
+    display: flex;                    
+    flex-direction: column;
+    gap: 40px;                               /*permite controlar el espacio entre los elementos*/
+}
+
+.presentacion__contenido__titulo{
+    font-size: 2.25rem;                         /*tamaño de fuente*/
+    font-family: var(--fuente-monserrat);
+}
+
+.titulo-destaque {
+    color: #22D4FD; ;
+}
+
+.presentacion__contenido__texto{
+    font-size: 1.25rem;
+    font-family: var(--fuente-monserrat);
+}
+
+.texto__hablamos{
+    font-size: 1.25rem;
+    font-family: var(--fuente-monserrat);
+}
+.texto__hablamos:hover{
+    color: var(--color-terciario);
+}
+
+.presentacion__enlaces{
+    display: flex;                         /* coloca los cuadrados uno al lado del otro */
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;                            /* agrega espacios iguales entre cada cuadrado */
+}
+
+.presentacion__enlaces__subtitulo{
+    font-family: var(--fuente-krona);
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.presentacion__enlaces__link{
+    width: 50%;
+    text-align: center;                    /*alinear texto*/
+    border-radius: 8px;                   /*cambia el radio del recuadro*/
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 21.5px 0;
+    text-decoration: none;               
+    color: var(--color-secundario);                      /*agrega un color*/
+    font-family: var(--fuente-monserrat); /*agrega una fuente para el texto*/
+    border: 2px solid var(--color-terciario);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.presentacion__enlaces__link:hover{         /*permite colorear botones cuando el puntero esta por encima de este*/
+    background-color: var(--color-hover);
+}
+
+.presentacion__enlaces__link:hover {       /*dos opciones para cambiar el color del fondo al pasar el puntero*/
+    cursor: pointer;
+    background-color: var(--color-hover);
+}
+
+.presentacion__imagen{
+    width: 50%; 
+}
+
+.footer{
+    background-color: var(--color-terciario);
+    padding: 24px;
+    color: var(--color-primario);
+    text-align: center;
+    font-family: var(--fuente-monserrat);
+    font-size: 1.5rem;
+    font-weight: 450;
+}
+
+.texto__certificado{
+    color: var(--color-terciario);
+}
+
+@media (max-width: 1200px){
+    .header{
+        padding: 10%;
+        width: auto;
+    }
+    .header__menu{
+        justify-content: center;
+    }
+    .presentacion{
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+    .presentacion__contenido{
+        width: auto;
+        padding: 3%;
+    }
+}
